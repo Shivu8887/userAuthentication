@@ -5,28 +5,29 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
-      <nav className="navbar bg-body-tertiary nav-bg-dark">
-        <div className="container-fluid">
-        <a className="navbar-brand"><img src={logo} alt="" width="70px" /></a>
-        <ul className="nav-links" >
-          <li><Link to={'/'}>HOME</Link></li>
+      {/* <nav className="navbar bg-body-tertiary nav-bg-dark"> */}
+        <div className="container-fluid header">
+        <Link to={"/home"} className="navbar-brand"><img className="logo" src={logo} alt="" width="50px" /></Link>
+        <ul className="nav-links navList" >
+          <li><Link  to={'/'}>HOME</Link></li>
           <li><Link to='/contact'>CONTACT</Link>
           </li>
           <li><Link to ='/About'>ABOUT</Link></li>
         </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex search-form" role="search">
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button style={{    width: "auto"
+}} className="btn btn-outline-primary" type="submit">
               Search
             </button>
           </form>
         </div>
-      </nav>
+      {/* </nav> */}
     </>
   );
 }

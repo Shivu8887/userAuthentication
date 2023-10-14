@@ -57,10 +57,9 @@ function About() {
          
         </div>
       </section>
+      <Footer />
+  
 
-      <div class="footer-about">
-        <p>©2023 | All Rights Reserved</p>
-      </div>
     </>
   );
 }
